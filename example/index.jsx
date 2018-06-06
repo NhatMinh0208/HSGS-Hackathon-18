@@ -6,7 +6,7 @@ import "./index.css";
 class Row extends React.Component {
   render() {
     const array = [];
-    for (let id = 0; id < this.props.N; ++id) {
+    for (let id = this.props.N - 1; id >= 0; --id) {
       if (id < this.props.pile.length) {
         array.push(<td key={id}>{this.props.pile[id]}</td>);
       } else {
